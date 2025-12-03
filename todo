@@ -1,0 +1,180 @@
+✅ 7‑Day Full‑Stack Login Project Plan (Flask)
+🗓 DAY 1 – Project Setup & Design
+👤 Person A – Backend
+• Create Flask project structure
+• Setup:
+• venv
+• Install:
+• flask
+• flask_sqlalchemy
+• flask_bcrypt
+• flask_jwt_extended
+• flask_cors
+• Create:
+• app.py
+• auth/routes.py
+• models.py
+• config.py
+• Test simple route: /health
+👤 Person B – Frontend
+• Design UI wireframe for:
+• Login Page
+• Register Page
+• Dashboard
+• Create frontend folder:
+• index.html
+• login.html
+• register.html
+• style.css
+• Build static UI only (no backend yet)
+👤 Person C – Database
+• Finalize DB choice: SQLite / PostgreSQL
+• Design users table:
+• id
+• username
+• email
+• password
+• Setup SQLAlchemy config locally
+• Test DB connection
+✅ End of Day 1 Output
+• Backend runs
+• Frontend pages visible
+• DB connected
+
+🗓 DAY 2 – User Registration (Signup)
+👤 Person A – Backend
+• Create /register API
+• Password hashing using bcrypt
+• Input validation
+• Send success/failure response JSON
+👤 Person B – Frontend
+• Add Register form validation (JS)
+• Connect form to backend using fetch()
+• Show:
+• Success message
+• Error message
+👤 Person C – DB + Testing
+• Store hashed password in DB
+• Confirm no plaintext password stored
+• Test using Postman
+✅ End of Day 2 Output
+• Users can register successfully
+
+🗓 DAY 3 – User Login + JWT
+👤 Person A – Backend
+• Create /login API
+• Verify:
+• Email/username exists
+• Password matches
+• Generate JWT token
+• Return token to frontend
+👤 Person B – Frontend
+• Connect login page to backend
+• Store JWT in:
+• localStorage or cookie
+• Auto‑redirect to dashboard on success
+👤 Person C – Integration
+• Full flow test:
+• Register → Login → Token stored
+• Bug fixing
+✅ End of Day 3 Output
+• Secure working login system
+
+🗓 DAY 4 – Protected Dashboard
+👤 Person A – Backend
+• Create protected route:
+• /dashboard
+• Allow only valid JWT users
+👤 Person B – Frontend
+• Create dashboard page:
+• Show username
+• Logout button
+• Block dashboard if no token
+👤 Person C – Token Validation
+• Test:
+• Access without token ❌
+• Access with token ✅
+✅ End of Day 4 Output
+• Token‑secured dashboard running
+
+🗓 DAY 5 – Logout, Error Handling & Security
+👤 Person A – Backend
+• Add:
+• /logout
+• Token invalidation (if needed)
+• Add:
+• CORS
+• Rate limiting
+• Input sanitization
+👤 Person B – Frontend
+• Implement Logout
+• Show clean error messages:
+• Invalid password
+• User not found
+• Server error
+👤 Person C – Security Testing
+• Try:
+• Wrong password
+• SQL injection attempt
+• Empty input tests
+✅ End of Day 5 Output
+• Secure authentication flow complete
+
+🗓 DAY 6 – Project Polish + Deployment Prep
+👤 Person A – Backend
+• Clean API responses
+• Add environment variables
+• Final bug fixes
+👤 Person B – Frontend
+• UI polish:
+• Animations
+• Responsive layout
+• Final styling
+👤 Person C – Deployment Setup
+• Prepare:
+• requirements.txt
+• GitHub repo
+• Optional:
+• Deploy on Render / Railway
+✅ End of Day 6 Output
+• Production‑ready build
+
+🗓 DAY 7 – Testing, Report & Demo
+👤 ALL THREE
+• End‑to‑end testing
+• Fix last bugs
+• Prepare:
+• Project Report
+• Architecture diagram
+• Demo screenshots
+• Practice demo explanation
+✅ Final Output
+✅ Full‑Stack Flask Login System
+✅ Working Registration
+✅ JWT Authentication
+✅ Protected Dashboard
+✅ Secure Logout
+✅ Deployment Ready
+
+✅ Tech Stack Summary
+• Backend: Python + Flask
+• Auth: JWT + Bcrypt
+• DB: SQLite / PostgreSQL
+• Frontend: HTML + CSS + JavaScript
+• Testing: Postman
+• Version Control: GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
