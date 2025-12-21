@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from app import db
-from database.models import User
+from database.models import User 
 from flask_jwt_extended import create_access_token
 
 auth_bp = Blueprint("auth", __name__)
@@ -32,3 +32,7 @@ def login():
 
     access_token = create_access_token(identity=user.id)
     return jsonify({"msg": "Logged in successfully", "token": access_token}), 200
+
+@auth_bp.route("/health", methods=["GET"])
+def health_check():
+    return jsonify({"status": "OK"}), 200
