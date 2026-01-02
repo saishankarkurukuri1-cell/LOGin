@@ -1,8 +1,10 @@
+import sys,os
+sys.path.append(os.path.abspath("../"))
 from flask import Flask
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
-from database.config import Config    
-from database.models import db,bcrypt 
+from db.config import Config    
+from db.models import db,bcrypt 
 
 # Initialize extensions
 jwt = JWTManager()

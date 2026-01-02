@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from app import db
-from database.models import User 
+from db.models import User 
 from flask_jwt_extended import create_access_token
 
 auth_bp = Blueprint("auth", __name__)
@@ -13,7 +13,7 @@ def register():
     if User.query.filter_by(email=data.get("email")).first():
         return jsonify({"msg": "Email already registered"}), 400
 
-    user = User(email=data.get("email"))
+    user = User(email=data.get("email"),name=data.get("name"))
     user.set_password(data.get("password"))
 
     db.session.add(user)
