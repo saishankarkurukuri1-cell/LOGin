@@ -15,6 +15,7 @@ form.addEventListener("submit",function(e){
   }
     if (!email.includes("@")) {
     message.textContent = "Invalid email";
+    message.style.color= "red";
     return;
     }
 

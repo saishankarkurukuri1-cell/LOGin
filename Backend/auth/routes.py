@@ -16,8 +16,12 @@ def register():
     user = User(email=data.get("email"),name=data.get("name"))
     user.set_password(data.get("password"))
 
-    db.session.add(user)
-    db.session.commit()
+    try:
+        db.session.add(user)
+        db.session.commit()
+    except:
+        db.session.rollback()
+        return jsonify({"error": "Registration failed"}), 500
     return jsonify({"message": "User created successfully"}), 201
 
 
